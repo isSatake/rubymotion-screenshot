@@ -10,10 +10,8 @@ class AppDelegate
 		@mainWindow.orderFrontRegardless
 		id = CGMainDisplayID()
 		img = CGDisplayCreateImage(id)
-		NSLog("ID is %@", id)
-		NSLog("img is %@", img)
-		outURL = NSURL.alloc.initFileURLWithPath("~/Desktop/hoge/") 
-		dr = CGImageDestinationCreateWithURL(outURL, "hoge.png", 1, nil)
+		outURL = NSURL.alloc.initFileURLWithPath("/Users/stk/Desktop/hoge.png") 
+		dr = CGImageDestinationCreateWithURL(outURL, "public.png", 1, nil)
 		CGImageDestinationAddImage(dr, img, nil)
 		CGImageDestinationFinalize(dr)
 	end
